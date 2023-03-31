@@ -34,4 +34,8 @@ export class HelloController {
     async getHelloError(@Body() body: any, @Param() params: any) {
         return this.service.getWorldError(body, params);
     }
+    @Post("error/unhandled")
+    async getHelloErrorUnhandled(@Body() body: any, @Param() params: any) {
+        throw new Error("unhandled");
+    }
 }
