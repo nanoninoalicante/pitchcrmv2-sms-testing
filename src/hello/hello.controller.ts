@@ -30,4 +30,8 @@ export class HelloController {
     async getHelloPut(@Body() body: any, @Param() params: any) {
         return this.service.getWorld(body, params);
     }
+    @Post("error")
+    async getHelloError(@Body() body: any, @Param() params: any) {
+        return this.service.getWorldError(body, params);
+    }
 }
