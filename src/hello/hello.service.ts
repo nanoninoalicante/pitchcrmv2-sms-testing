@@ -2,7 +2,7 @@ import { Injectable } from "@nestjs/common";
 
 @Injectable()
 export class HelloService {
-    async getWorld() {
-        return { message: "world" };
+    async getWorld(body: any = {}, params: any = {}) {
+        return { message: "world", ...body, ...params };
     }
 }
