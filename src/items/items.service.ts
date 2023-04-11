@@ -17,4 +17,7 @@ export class ItemsService {
     async get(itemName: string) {
         return await this.itemModel.find({ name: itemName });
     }
+    async getAll() {
+        return await this.itemModel.find({}, {}, { sort: { createdAt: -1 } });
+    }
 }

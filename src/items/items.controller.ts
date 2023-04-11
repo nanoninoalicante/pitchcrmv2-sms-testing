@@ -20,6 +20,10 @@ export class ItemsController {
     async create(@Param("itemName") itemName: string, @Body() body: any) {
         return this.service.create(itemName, body);
     }
+    @Get("/")
+    async getAll() {
+        return this.service.getAll();
+    }
     @Get("/:itemName")
     async get(@Param("itemName") itemName: string) {
         return this.service.get(itemName);
