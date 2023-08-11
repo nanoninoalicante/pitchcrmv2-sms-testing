@@ -5,6 +5,7 @@ import { HelloModule } from "./hello/hello.module";
 import { ConfigModule } from "@nestjs/config";
 import { PinpointModule } from './pinpoint/pinpoint.module';
 import { EmailModule } from './email/email.module';
+import { PinpointSimpleModule } from './pinpoint-simple/pinpoint-simple.module';
 
 @Module({
     imports: [
@@ -15,6 +16,7 @@ import { EmailModule } from './email/email.module';
         }),
         PinpointModule,
         EmailModule,
+        PinpointSimpleModule,
     ],
     controllers: [AppController],
     providers: [AppService],

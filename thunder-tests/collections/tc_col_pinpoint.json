@@ -1,0 +1,28 @@
+{
+    "_id": "2d6519be-835c-46b7-890b-a88e7a4b9841",
+    "colName": "Pinpoint",
+    "created": "2023-08-11T08:48:22.385Z",
+    "sortNum": 10000,
+    "folders": [],
+    "requests": [
+        {
+            "_id": "1de81952-4cbd-419a-a99f-7fc9ed8bda23",
+            "colId": "2d6519be-835c-46b7-890b-a88e7a4b9841",
+            "containerId": "",
+            "name": "Send Simple SMS",
+            "url": "http://127.0.0.1:8080/pinpoint-simple/v3",
+            "method": "POST",
+            "sortNum": 10000,
+            "created": "2023-08-11T08:48:35.524Z",
+            "modified": "2023-08-11T08:51:05.370Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"destinationPhone\": \"+34644632342\"\n}",
+                "form": []
+            },
+            "tests": []
+        }
+    ]
+}
