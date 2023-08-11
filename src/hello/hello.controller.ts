@@ -18,6 +18,10 @@ import { ResponseInterceptor } from "src/interceptors/response.interceptor";
 @Controller("hello")
 export class HelloController {
     constructor(protected service: HelloService) {}
+    @Get("hash")
+    generateHash() {
+        return this.service.generateHash();
+    }
     @Get("world")
     async getHello() {
         return this.service.getWorld();
