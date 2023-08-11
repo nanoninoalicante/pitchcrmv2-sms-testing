@@ -23,15 +23,16 @@ export class PinpointSimpleService {
         });
     }
     async sendSMSV3(params: any) {
-        // const OriginationNumber = "+18335000712";
+        const OriginationNumber = "+18449892713";
         // Specify the phone number you want to send the SMS to
         const toPhoneNumber = params.destinationPhone || "+16504415689"; // Replace with the phone number you want to send SMS to
 
         // Specify the message you want to send
-        const message = `Hello, this is a test message! to: ${toPhoneNumber}`;
+        const message = `Hello, this is a test message from Great Knox! to: ${toPhoneNumber}`;
 
         const input: SendTextMessageCommandInput = {
             // SendTextMessageRequest
+            OriginationIdentity: OriginationNumber,
             DestinationPhoneNumber: toPhoneNumber, // required
             MessageBody: message,
             // MessageType: "TRANSACTIONAL" or "PROMOTIONAL"
