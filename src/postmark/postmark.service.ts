@@ -9,10 +9,17 @@ export class PostmarkService {
     }
     async sendEmail(input: any) {
         const params: TemplatedMessage = {
-            TemplateModel: {},
-            From: "hello@greatknox.com",
+            TemplateModel: {
+                name: input.name || "Dinesh Kumar",
+                verifyLink:
+                    input.verifyLink ||
+                    "https://greatknox-dev-dashboard-yjbc3ulisq-ue.a.run.app/auth/set/account/owfwejfwij11",
+            },
+            From: "GreatKnox<support@greatknox.com>",
+            Cc: input.cc || "cjameshill@me.com",
             TemplateAlias: "email-verification",
             To: input.email,
+            ReplyTo: "GreatKnox<support@greatknox.com>",
         };
         const client = new ServerClient(this.postmarkApiKey);
         const response = await client.sendEmailWithTemplate(params);
