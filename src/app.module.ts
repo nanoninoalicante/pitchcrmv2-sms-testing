@@ -6,6 +6,7 @@ import { ConfigModule } from "@nestjs/config";
 import { PinpointModule } from './pinpoint/pinpoint.module';
 import { EmailModule } from './email/email.module';
 import { PinpointSimpleModule } from './pinpoint-simple/pinpoint-simple.module';
+import { PostmarkModule } from './postmark/postmark.module';
 
 @Module({
     imports: [
@@ -17,6 +18,7 @@ import { PinpointSimpleModule } from './pinpoint-simple/pinpoint-simple.module';
         PinpointModule,
         EmailModule,
         PinpointSimpleModule,
+        PostmarkModule,
     ],
     controllers: [AppController],
     providers: [AppService],
