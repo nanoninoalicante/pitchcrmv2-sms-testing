@@ -16,7 +16,7 @@ export class PostmarkService {
                     "https://greatknox-dev-dashboard-yjbc3ulisq-ue.a.run.app/auth/set/account/owfwejfwij11",
             },
             From: "GreatKnox<support@greatknox.com>",
-            Cc: input.cc || "cjameshill@me.com",
+            Cc: input.cc || "christopher@nanonino.com",
             TemplateAlias: "email-verification",
             To: input.email,
             ReplyTo: "GreatKnox<support@greatknox.com>",
