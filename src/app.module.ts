@@ -8,6 +8,7 @@ import { EmailModule } from './email/email.module';
 import { PinpointSimpleModule } from './pinpoint-simple/pinpoint-simple.module';
 import { PostmarkModule } from './postmark/postmark.module';
 import { MessagebirdModule } from './messagebird/messagebird.module';
+import { FirestoreModule } from './firestore/firestore.module';
 
 @Module({
     imports: [
@@ -21,6 +22,7 @@ import { MessagebirdModule } from './messagebird/messagebird.module';
         PinpointSimpleModule,
         PostmarkModule,
         MessagebirdModule,
+        FirestoreModule,
     ],
     controllers: [AppController],
     providers: [AppService],

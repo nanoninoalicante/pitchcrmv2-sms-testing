@@ -7,14 +7,18 @@ export class MessagebirdService {
     constructor(protected config: ConfigService) {
         this.messagebird = initClient(this.config.get("MESSAGEBIRD_API_KEY"));
     }
-    private async sendMessage(input: any): Promise<any> {
+    private async sendSMSMessage(input: any): Promise<any> {
         return new Promise((resolve, reject) => {
-            this.messagebird.messages.create(
-                {
-                    originator: input.from || "+12035477119",
-                    recipients: [input.to || "+34644632342"],
-                    body: input.message || "Hello world",
+            const params = {
+                type: "text",
+                from: input.from || "aa213b01b6ed4df3b0764d4c0ce23554",
+                to: input.to || "+34644632342",
+                content: {
+                    text: input.message || "Hello world",
                 },
+            };
+            this.messagebird.conversations.send(
+                params,
                 (err: any, response: any) => {
                     if (err) {
                         console.log(err);
@@ -30,7 +34,7 @@ export class MessagebirdService {
         console.log(
             `Sending SMS to ${input.to} with message: ${input.message}`,
         );
-        const response = await this.sendMessage(input);
+        const response = await this.sendSMSMessage(input);
         console.log("SMS sent", response);
         return response;
     }
