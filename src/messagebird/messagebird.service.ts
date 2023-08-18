@@ -4,14 +4,16 @@ import { initClient } from "messagebird";
 @Injectable()
 export class MessagebirdService {
     messagebird: any;
+    private smsOriginatorChannelId: any;
     constructor(protected config: ConfigService) {
         this.messagebird = initClient(this.config.get("MESSAGEBIRD_API_KEY"));
+        this.smsOriginatorChannelId = this.config.get("MESSAGEBIRD_CHANNEL_ID");
     }
     private async sendSMSMessage(input: any): Promise<any> {
         return new Promise((resolve, reject) => {
             const params = {
                 type: "text",
-                from: input.from || "aa213b01b6ed4df3b0764d4c0ce23554",
+                from: input.from || this.smsOriginatorChannelId,
                 to: input.to || "+34644632342",
                 content: {
                     text: input.message || "Hello world",
