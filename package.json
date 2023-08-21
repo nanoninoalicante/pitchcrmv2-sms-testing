@@ -28,7 +28,7 @@
     "@nestjs/core": "^9.0.0",
     "@nestjs/mongoose": "^9.2.2",
     "@nestjs/platform-express": "^9.0.0",
-    "aws-sdk": "^2.1360.0",
+    "aws-sdk": "^2.1425.0",
     "messagebird": "^4.0.1",
     "postmark": "^3.0.19",
     "reflect-metadata": "^0.1.13",
