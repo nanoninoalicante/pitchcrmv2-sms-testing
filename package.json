@@ -20,7 +20,7 @@
     "test:e2e": "jest --config ./test/jest-e2e.json"
   },
   "dependencies": {
-    "@aws-sdk/client-pinpoint-sms-voice-v2": "^3.347.1",
+    "@aws-sdk/client-pinpoint-sms-voice-v2": "^3.379.1",
     "@aws-sdk/client-sesv2": "^3.353.0",
     "@google-cloud/firestore": "^6.7.0",
     "@nestjs/common": "^9.0.0",
