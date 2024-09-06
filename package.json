@@ -22,7 +22,7 @@
   "dependencies": {
     "@aws-sdk/client-pinpoint-sms-voice-v2": "^3.347.1",
     "@aws-sdk/client-sesv2": "^3.353.0",
-    "@google-cloud/firestore": "^6.7.0",
+    "@google-cloud/firestore": "^7.0.0",
     "@nestjs/common": "^9.0.0",
     "@nestjs/config": "^2.3.1",
     "@nestjs/core": "^9.0.0",
@@ -30,7 +30,7 @@
     "@nestjs/platform-express": "^9.0.0",
     "aws-sdk": "^2.1360.0",
     "messagebird": "^4.0.1",
-    "postmark": "^3.0.19",
+    "postmark": "^4.0.4",
     "reflect-metadata": "^0.1.13",
     "rxjs": "^7.2.0",
     "uuid": "^9.0.0"
