@@ -30,7 +30,7 @@
     "@nestjs/platform-express": "^9.0.0",
     "aws-sdk": "^2.1360.0",
     "messagebird": "^4.0.1",
-    "postmark": "^3.0.19",
+    "postmark": "^4.0.0",
     "reflect-metadata": "^0.1.13",
     "rxjs": "^7.2.0",
     "uuid": "^9.0.0"
